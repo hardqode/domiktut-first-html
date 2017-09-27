@@ -55,7 +55,19 @@ img{
   background:rgba(255,255,255,0.9);
   border: 1px solid gray;
 }
-
+.second_section{
+  padding-top: 7px;
+  padding-bottom: 30px;
+  background:rgba(255,255,255,0.9);
+  border: 1px solid gray;
+}
+.second_section p{
+  margin-bottom: 3px;
+  margin-top: 20px;
+}
+.second_section button{
+  margin-top: 25px;
+}
 .section p{
   margin-bottom: 3px;
   margin-top: 20px;
@@ -66,13 +78,89 @@ img{
 .section button{
   margin-top: 25px;
 }
+#buttons{
+  margin-top:6px;
+}
 #more_search{
   font-size:14px;
-  padding-top: 8.6%;
 }
 #more_search a{
   color: gray;
+  margin-top:10px;
 }
+.catalog{
+  width: 100%;
+  padding-top:5%;
+}
+.catalog_item{
+  margin-bottom: 30px;
+}
+.catalog_item_img{
+}
+div.opacity{
+  width: 350px;
+  height:200px;
+  background-color: rgba(255,255,255,0);
+  z-index: 3;
+}
+div.opacity:hover{
+  background-color: rgba(255,255,255,0.5);
+}
+.item_img{
+  min-height: 200px;
+  background-color: black;
+  background-image: url('../img/1373467874_0.jpg');
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.catalog_item_price {
+  margin-top:-12%;
+  width: 130px;
+}
+.catalog_item_price span{
+  z-index: 5;
+  padding:5px;
+  font-weight: bold;
+  background: #f7941d;
+  color: white;
+  margin-left:1%;
+  margin-top: -20px;
+}
+.catalog_item_description{
+  margin-top:5%;
+  border:1px solid lightgray;
+  padding:20px;
+}
+.catalog_item_description h3{
+  color: #073855;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.35rem;
+}
+.orange_btn{
+  background: #f7941d;
+  color: white;
+  font-weight: bold;
+}
+.catalog_item_description i{
+  color: #f7941d;
+  font-weight: bold;
+  font-size: 1.65rem;
+  vertical-align: middle;
+}
+
+.catalog_item_description .row div span{
+  width:100%;
+}
+.description_icons{
+  margin-top: 20px;
+}
+.description_icons div{
+  padding-right:0px;
+  padding-left:10px;
+}
+
 #footer{
   border-top: 1px solid black;
   font-size: 12px;
@@ -84,13 +172,16 @@ img{
   font-size:20px;
   font-weight: bold;
 }
-#footer .col-lg-2 ul li .nav-link{
+#footer .col-md-2 ul li .nav-link{
   padding:0px;
 }
-#footer .col-lg-3 ul li .nav-link{
+#footer .col-md-3 ul li .nav-link{
   padding:0px;
 }
 #footer_logo{
+  vertical-align: middle;
+  text-align: center;
+  margin:0 auto;
   padding-bottom: 20px;
   padding-left: 20px;
 }
