@@ -2,8 +2,12 @@ body{
   margin: 0 auto;
   overflow-x: hidden;
 }
-img{
-  max-width: none;
+
+a:hover{
+  text-decoration: none;
+}
+.orange_text{
+    color: #ff4900;
 }
 #navigation_block{
   background: white;
@@ -95,6 +99,9 @@ img{
 .catalog_item{
   margin-bottom: 30px;
 }
+.catalog_item a{
+  color: black;
+}
 .catalog_item_img{
 }
 div.opacity{
@@ -157,38 +164,170 @@ div.opacity:hover{
   margin-top: 20px;
 }
 .description_icons div{
-  padding-right:0px;
+  padding-right:0;
   padding-left:10px;
+}
+.description_item{
+  padding-top: 40px;
+}
+.item_media{
+  padding-bottom:40px;
 }
 
 #footer{
-  border-top: 1px solid black;
+    background: #ff6e00;
   font-size: 12px;
-  padding-top: 25px;
   bottom: 0;
-  width: 101.1%;
+  width: 104.7%;
+    padding-bottom: 20px;
+}
+.first_part_footer{
+  margin-left: 0;
+  padding-top:25px;
+  margin-bottom: 15px;
+  background: #f3f3f3;
+  text-align: center;
+}
+.first_part_footer p{
+  margin:20px;
 }
 #footer_phone{
+    color: white;
+  text-align: center;
   font-size:20px;
   font-weight: bold;
 }
 #footer .col-md-2 ul li .nav-link{
-  padding:0px;
+    color: white;
+  padding:0;
 }
 #footer .col-md-3 ul li .nav-link{
-  padding:0px;
+    color: white;
+  padding:0;
 }
 #footer_logo{
-  vertical-align: middle;
   text-align: center;
-  margin:0 auto;
-  padding-bottom: 20px;
-  padding-left: 20px;
 }
 #footer_host{
-  margin-left: 25px;
+    color: white;
   font-size: 12px;
 }
 .footer_icon{
   margin-left:-10%;
+}
+.uslugi{
+}
+.header1{
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
+}
+.centered{
+  text-align: center;
+}
+.yellow-a{
+  color:#f7941d;
+  text-decoration: none;
+}
+.uslugi_img{
+  height: 210px;
+  padding: 5px;
+  border:1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+}
+.icon_opis{
+    text-align: center;
+}
+.icon_opis i{
+    width: 72px;
+    height:72px;
+    color: #e29e00;
+    font-size: 4.5rem;
+    font-style: normal;
+}
+.icon_opis span{
+    font-weight: bold;
+}
+.uslugi_img:hover{
+  border:1px solid #2a6496;
+}
+.sotrudnik{
+    margin-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+}
+.sotrudnik span{
+    font-weight: bold;
+}
+.sotrudnik img{
+    height:240px;
+    margin-bottom: 15px;
+}
+.responses{
+    margin-bottom: 30px;
+}
+.brand_img{
+    margin-bottom: 20px;
+}
+.carousel-item img{
+  max-height: 30%;
+}
+.btn-group{
+  width:350px;
+}
+.btn-check{
+  color: royalblue;
+  border-color: royalblue;
+  background: white;
+  font-size: 14px;
+  margin-bottom: 20px;
+  width:33%;
+}
+.btn-check label{
+  width:33%;
+}
+.btn-check.active{
+  color: white;
+  background: royalblue;
+}
+.text-right{
+  text-align: right;
+}
+.prices{
+  font-size:14px;
+}
+.description_text{
+  font-size:14px;
+}
+.feedback{
+  margin-bottom: 20px;
+}
+@media (min-width: 0px){
+  .uslugi_img{
+    width:290px;
+  }
+  .footer_menu{
+    text-align: center;
+  }
+  #footer_host{
+    text-align: right;
+  }
+}
+.mt{
+  margin-top:25px;
+}
+
+@media (min-width: 768px){
+  .uslugi_img{
+    max-width:270px;
+  }
+  .footer_menu{
+    padding-top: 1%;
+    padding-left: 5%;
+    text-align: left;
+  }
+  #footer_host{
+    text-align: center;
+  }
 }
