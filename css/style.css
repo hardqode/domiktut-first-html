@@ -6,6 +6,17 @@ body{
 a:hover{
   text-decoration: none;
 }
+.header_nav{
+  font-size: 17px;
+}
+.second_btn{
+  font-size: 13px;
+  color: gray;
+  margin-top:10px;
+}
+.second_btn a{
+  color: gray;
+}
 .orange_text{
     color: #ff4900;
 }
@@ -86,7 +97,7 @@ a:hover{
   margin-top:6px;
 }
 #more_search{
-  font-size:14px;
+  font-size:13px;
 }
 #more_search a{
   color: gray;
@@ -96,55 +107,39 @@ a:hover{
   width: 100%;
   padding-top:5%;
 }
-.catalog_item{
-  margin-bottom: 30px;
-}
+
 .catalog_item a{
   color: black;
 }
 .catalog_item_img{
+  padding: 0;
 }
 div.opacity{
-  width: 350px;
-  height:200px;
+  width: 380px;
   background-color: rgba(255,255,255,0);
-  z-index: 3;
+  z-index: 50;
 }
 div.opacity:hover{
   background-color: rgba(255,255,255,0.5);
 }
-.item_img{
-  min-height: 200px;
-  background-color: black;
-  background-image: url('../img/1373467874_0.jpg');
-  background-size: 350px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+#btn-dover{
+  position: absolute;
+  bottom:30px;
 }
 .catalog_item_price {
-  margin-top:-12%;
+  margin-top:-7%;
   width: 130px;
 }
 .catalog_item_price span{
-  z-index: 5;
+  z-index: 3;
   padding:5px;
   font-weight: bold;
   background: #f7941d;
   color: white;
-  margin-left:1%;
+  margin-left:4%;
   margin-top: -20px;
 }
-.catalog_item_description{
-  margin-top:5%;
-  border:1px solid lightgray;
-  padding:20px;
-}
-.catalog_item_description h3{
-  color: #073855;
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 1.35rem;
-}
+
 .orange_btn{
   background: #f7941d;
   color: white;
@@ -179,12 +174,13 @@ div.opacity:hover{
   font-size: 12px;
   bottom: 0;
   width: 104.7%;
+  padding-top: 15px;
     padding-bottom: 20px;
 }
 .first_part_footer{
+  font-size: 17px                                                                                                                           ;
   margin-left: 0;
   padding-top:25px;
-  margin-bottom: 15px;
   background: #f3f3f3;
   text-align: center;
 }
@@ -207,6 +203,7 @@ div.opacity:hover{
 }
 #footer_logo{
   text-align: center;
+  padding-left:5%;
 }
 #footer_host{
     color: white;
@@ -274,7 +271,7 @@ div.opacity:hover{
   max-height: 30%;
 }
 .btn-group{
-  width:350px;
+  width:300px;
 }
 .btn-check{
   color: royalblue;
@@ -303,7 +300,65 @@ div.opacity:hover{
 .feedback{
   margin-bottom: 20px;
 }
-@media (min-width: 0px){
+.mt{
+   margin-top:25px;
+ }
+#under_phone{
+  display: inline-flex;
+}
+#mobile_footer{
+  padding-top: 25px;
+  font-size:14px;
+  color: white;
+  background: #ff6e00;
+}
+#mobile_footer p{
+  width:120%;
+}
+#mobile_footer a{
+  color: white;
+}
+@media (min-width: 320px){
+  .catalog_item_description h3{
+    color: #073855;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .catalog_item{
+    margin-bottom: 10px;
+  }
+  .opacity{
+    height: 262px;
+  }
+  .catalog_item_price2 span{
+    z-index: 5;
+    padding:5px;
+    margin-left:4%;
+    margin-top: -20px;
+    font-weight: bold;
+  }
+  .catalog_item_price2 {
+    padding-left: 0;
+    margin-left: 50%;
+    margin-top: -7%;
+    background: #f7941d;
+    color: white;
+    z-index: 2;
+    width: 130px;
+  }
+  .item_img{
+    height: 95px;
+    background-color: black;
+    background-image: url('../img/1373467874_0.jpg');
+    background-size: 175px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .catalog_item_description{
+    border:1px solid lightgray;
+    padding:5px;
+  }
   .uslugi_img{
     width:290px;
   }
@@ -313,12 +368,42 @@ div.opacity:hover{
   #footer_host{
     text-align: right;
   }
-}
-.mt{
-  margin-top:25px;
+  #footer{
+    display: none;
+  }
 }
 
+
 @media (min-width: 768px){
+  .catalog_item_description h3{
+    color: #073855;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.35rem;
+  }
+  .catalog_row{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .catalog_item{
+    margin-bottom: 30px;
+  }
+  .opacity{
+    height: 200px;
+  }
+  .item_img{
+    min-height: 200px;
+    background-color: black;
+    background-image: url('../img/1373467874_0.jpg');
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .catalog_item_description{
+    margin-top:3%;
+    border:1px solid lightgray;
+    padding:20px;
+  }
   .uslugi_img{
     max-width:270px;
   }
@@ -329,5 +414,9 @@ div.opacity:hover{
   }
   #footer_host{
     text-align: center;
+  }
+  #footer{
+    display: flex;
+    flex-wrap: wrap;
   }
 }

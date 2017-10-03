@@ -50,7 +50,7 @@
                 <a class="nav-link" href="about.html">О Компании</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="interesting.html">Полезно знать</a>
+                <a class="nav-link" href="interesting.html">Полезно знать</a>
             </li>
         </ul>
     </div>
@@ -233,23 +233,25 @@
 </div>
 <!-- FOOTER -->
 
-<div class="row" id="footer">
-    <div class="first_part_footer col-12 row ">
-        <div class="col-12 ">
-            <img src="img/logo-domiktut4.png" alt="">
-        </div>
-        <div class="col-12 ">
-            <p>СНЯТЬ ДОМ ПОСУТОЧНО, АРЕНДА ДОМА НА СУТКИ - DOMIKTUT.RU <br>
-                Более 300 домов по всем направлениям , аренда от собственника , гарантия лучшей цены . Звоните !</p>
-        </div>
+<div class="first_part_footer col-12 row d-none d-md-flex" id="footer_first">
+    <div class="col-12 ">
+        <img src="img/logo-domiktut4.png" alt="">
     </div>
-    <div class="col-12 col-md-2 mr-md-0 ml-md-0" id="footer_logo">
+    <div class="col-12 ">
+        <p>СНЯТЬ ДОМ ПОСУТОЧНО, АРЕНДА ДОМА НА СУТКИ - DOMIKTUT.RU <br>
+            Более 300 домов по всем направлениям , аренда от собственника , гарантия лучшей цены . Звоните !</p>
+    </div>
+</div>
+
+<div class="row" id="footer">
+
+    <div class="col-12 col-md-2 mr-md-0 ml-md-0 d-sm-none d-md-flex" id="footer_logo">
         <a href="index.html">
             <img src="img/logo-domiktut4.png" alt="" width="140" height="80">
         </a>
     </div>
 
-    <div class="col-12 col-md-2 ml-md-auto footer_menu">
+    <div class="col-12 col-md-2 ml-md-auto footer_menu d-sm-none d-md-flex" >
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Коттеджи в Казани</a>
@@ -260,7 +262,7 @@
         </ul>
     </div>
 
-    <div class="col-12 col-md-2 ml-md-auto footer_menu">
+    <div class="col-12 col-md-2 ml-md-auto footer_menu d-sm-none d-md-flex">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="#">О компании</a>
@@ -274,7 +276,7 @@
         </ul>
     </div>
 
-    <div class="col-12 col-md-3 ml-md-auto footer_menu">
+    <div class="col-12 col-md-3 ml-md-auto footer_menu d-sm-none d-md-flex">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Коттеджи для свадьбы</a>
@@ -288,25 +290,32 @@
         </ul>
     </div>
 
-    <div class="col-12  col-md-3 footer_menu">
-        <div class="col-12 "><label id="footer_phone">+7 (917) 123-45-67</label></div>
-        <div class="row">
-            <div class="col-7 col-md-6 ml-md-auto " id="footer_host">Domiktut.ru 2017</div>
-            <div class="col-3 col-md-2 mr-md-1 footer_icon">
-                <a href="#">
-                    <img src="img/vk.png" alt="" width="20" height="20">
-                </a>
-            </div>
+    <div class="col-12  col-md-3 footer_menu d-sm-none d-md-flex">
+        <div class="col-12 ">
+            <label id="footer_phone">+7 (917) 123-45-67</label>
+            <div id="under_phone">
+                <div class="col-md-7  " id="footer_host"><label>Domiktut.ru 2017</label></div>
+                <div class="col-md-3  footer_icon">
+                    <a href="#">
+                        <img src="img/vk.png" alt="" width="20" height="20">
+                    </a>
+                </div>
 
-            <div class="col-2 mr-7 mr-md-5 col-md-3 footer_icon">
-                <a href="#">
-                    <img src="img/vk.png" alt="" width="20" height="20">
-                </a>
+                <div class="col-md-3 footer_icon">
+                    <a href="#">
+                        <img src="img/vk.png" alt="" width="20" height="20">
+                    </a>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
-
+<div class="row" id="modile_call">
+    <div class="col-12 d-flex d-md-none">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Позвонить</button>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

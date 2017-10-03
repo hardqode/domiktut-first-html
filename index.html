@@ -11,8 +11,15 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
           integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Include Required Prerequisites -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 
 </head>
 <body>
@@ -24,8 +31,8 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav header_nav">
             <li class="nav-item active dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,16 +85,16 @@
 </nav>
 
 <div class="row">
-    <div class="col-12">
+    <div class="col-12 d-none d-md-inline">
         <div class="constructor">
             <div class="row constructor_form mx-auto">
-                <div class="col-11 col-md-5 ml-auto mr-auto mr-md-0 ml-md-auto section">
+                <div class="col-11 col-md-4 mr-md-0 ml-auto section">
                     <h4>Найдите коттедж на Domiktut</h4>
                     <h5>Настоящие фотки. Дешево. Сердито.</h5>
                     <div class="row">
                         <div class="col">
                             <p>Бассейн</p>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -97,7 +104,7 @@
                         </div>
                         <div class="col">
                             <p>Вместимость</p>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -108,7 +115,7 @@
                         <div class="w-100"></div>
                         <div class="col">
                             <p>Парная</p>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -118,7 +125,7 @@
                         </div>
                         <div class="col">
                             <p>Развлечения</p>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -129,21 +136,28 @@
                         <div class="w-100"></div>
                         <div class="col">
                             <p>Цена:</p>
-                            <input type="range">
+                            <section class="range-slider">
+                                <span class="rangeValues"></span>
+                                <input value="500" min="100" max="600" step="5" type="range">
+                                <input value="500" min="100" max="600" step="5" type="range">
+                            </section>
                         </div>
                     </div>
                     <div class="row align-items-end" id="buttons">
-                        <div class="col-5 col-md-5 ml-auto">
+                        <div class="col-3 col-md-4 second_btn">
+                            <a href="#">Сбросить фильтр</a>
+                        </div>
+                        <div class="col-6 col-md-4">
                             <button type="button" class="btn btn-primary btn-block">Поиск</button>
                         </div>
-                        <div class="col-6 col-md-4 " id="more_search">
+                        <div class="col-3 col-md-4 " id="more_search">
                             <a href="#">Расширенный поиск</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-11 ml-auto mr-auto col-md-3 ml-md-0 mr-md-auto second_section">
+                <div class="col-md-3 ml-md-0 second_section">
                     <p>Количество спален</p>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -151,7 +165,7 @@
                         <option>5</option>
                     </select>
                     <p>Количество спальных мест</p>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -159,7 +173,7 @@
                         <option>5</option>
                     </select>
                     <p>Расположение</p>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -167,13 +181,13 @@
                         <option>5</option>
                     </select>
                     <div class="row">
-                        <div class="col">
+                        <div class="col-6">
                             <p>Дата заезда</p>
-                            <input type="text" style="width: 90%">
+                            <input type="text" name="startdate" id="startdate"/>
                         </div>
-                        <div class="col">
+                        <div class="col-6">
                             <p>Дата выезда</p>
-                            <input type="text" style="width: 90%">
+                            <input type="text" name="finishday" id="finishdate" />
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -182,340 +196,880 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-3 mr-5">
+                    <button type="button" class="btn btn-primary btn-block" id="btn-dover">Почему нам доверяют?</button>
+                </div>
             </div>
         </div>
     </div>
     <div class="container catalog">
         <div class="row">
-            <div class="col-10 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
                 <a href="card_item.html">
-                <div class="catalog_item_img">
-
-                    <div class="item_img">
-
-                            <div class="opacity">
-
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
                             </div>
-
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                    <div class="catalog_item_price">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-                <div class="catalog_item_description">
-                    <h3>Введенская слобода</h3>
-                    <div class="row description_icons">
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Хамам</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бассейн 50м2</label>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>на 50 человек</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бильярд, теннис</label>
-                        </div>
-                    </div>
-                </div>
                 </a>
             </div>
-            <div class="col-10 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-
-                <div class="catalog_item_img">
-
-                    <div class="item_img">
-                        <a href="#">
-                            <div class="opacity">
-
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
                             </div>
-                        </a>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                    <div class="catalog_item_price">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-                <div class="catalog_item_description">
-                    <a href="#"><h3>Введенская слобода</h3></a>
-                    <div class="row description_icons">
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Хамам</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бассейн 50м2</label>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>на 50 человек</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бильярд, теннис</label>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="col-10 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-
-                <div class="catalog_item_img">
-
-                    <div class="item_img">
-                        <a href="#">
-                            <div class="opacity">
-
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
                             </div>
-                        </a>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                    <div class="catalog_item_price">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-                <div class="catalog_item_description">
-                    <a href="#"><h3>Введенская слобода</h3></a>
-                    <div class="row description_icons">
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Хамам</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бассейн 50м2</label>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>на 50 человек</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бильярд, теннис</label>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="col-10 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-
-                <div class="catalog_item_img">
-
-                    <div class="item_img">
-                        <a href="#">
-                            <div class="opacity">
-
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
                             </div>
-                        </a>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                    <div class="catalog_item_price">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-                <div class="catalog_item_description">
-                    <a href="#"><h3>Введенская слобода</h3></a>
-                    <div class="row description_icons">
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Хамам</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бассейн 50м2</label>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>на 50 человек</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бильярд, теннис</label>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="col-10 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-
-                <div class="catalog_item_img">
-
-                    <div class="item_img">
-                        <a href="#">
-                            <div class="opacity">
-
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
                             </div>
-                        </a>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                    <div class="catalog_item_price">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-                <div class="catalog_item_description">
-                    <a href="#"><h3>Введенская слобода</h3></a>
-                    <div class="row description_icons">
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Хамам</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бассейн 50м2</label>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>на 50 человек</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бильярд, теннис</label>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="col-10 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-
-                <div class="catalog_item_img">
-
-                    <div class="item_img">
-                        <a href="#">
-                            <div class="opacity">
-
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
                             </div>
-                        </a>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                    <div class="catalog_item_price">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-                <div class="catalog_item_description">
-                    <a href="#"><h3>Введенская слобода</h3></a>
-                    <div class="row description_icons">
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Хамам</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бассейн 50м2</label>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>на 50 человек</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бильярд, теннис</label>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="col-10 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-
-                <div class="catalog_item_img">
-
-                    <div class="item_img">
-                        <a href="#">
-                            <div class="opacity">
-
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
                             </div>
-                        </a>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                    <div class="catalog_item_price">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-                <div class="catalog_item_description">
-                    <a href="#"><h3>Введенская слобода</h3></a>
-                    <div class="row description_icons">
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Хамам</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бассейн 50м2</label>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>на 50 человек</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бильярд, теннис</label>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="col-10 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-
-                <div class="catalog_item_img">
-
-                    <div class="item_img">
-                        <a href="#">
-                            <div class="opacity">
-
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
                             </div>
-                        </a>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                    <div class="catalog_item_price">
-                        <span>10000-45000 p.</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
                     </div>
-                </div>
-                <div class="catalog_item_description">
-                    <a href="#"><h3>Введенская слобода</h3></a>
-                    <div class="row description_icons">
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Хамам</label>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бассейн 50м2</label>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>на 50 человек</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <i class="material-icons">tag_faces</i>
-                            <label>Бильярд, теннис</label>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
                         </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                            </div>
+                            <div class="d-none d-md-flex catalog_item_price">
+                                <span>10000-45000 p.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Хамам</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бассейн 50м2</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>на 50 человек</label>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <i class="material-icons">tag_faces</i>
+                                    <label>Бильярд, теннис</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
+                            <span>10000-45000 p.</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 
 <!-- FOOTER -->
+<div class="first_part_footer col-12 row d-sm-flex" id="footer_first">
+    <div class="col-12 ">
+        <img src="img/logo-domiktut4.png" alt="">
+    </div>
+    <div class="col-12 ">
+        <p>СНЯТЬ ДОМ ПОСУТОЧНО, АРЕНДА ДОМА НА СУТКИ - DOMIKTUT.RU <br>
+            Более 300 домов по всем направлениям , аренда от собственника , гарантия лучшей цены . Звоните !</p>
+    </div>
+</div>
 
 <div class="row" id="footer">
-    <div class="first_part_footer col-12 row ">
-        <div class="col-12 ">
-            <img src="img/logo-domiktut4.png" alt="">
-        </div>
-        <div class="col-12 ">
-            <p>СНЯТЬ ДОМ ПОСУТОЧНО, АРЕНДА ДОМА НА СУТКИ - DOMIKTUT.RU <br>
-                Более 300 домов по всем направлениям , аренда от собственника , гарантия лучшей цены . Звоните !</p>
-        </div>
-    </div>
-    <div class="col-12 col-md-2 mr-md-0 ml-md-0" id="footer_logo">
+
+    <div class="col-12 col-md-2 mr-md-0 ml-md-0 d-sm-none d-md-flex" id="footer_logo">
         <a href="index.html">
             <img src="img/logo-domiktut4.png" alt="" width="140" height="80">
         </a>
     </div>
 
-    <div class="col-12 col-md-2 ml-md-auto footer_menu">
+    <div class="col-12 col-md-2 ml-md-auto footer_menu d-sm-none d-md-flex">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Коттеджи в Казани</a>
@@ -526,7 +1080,7 @@
         </ul>
     </div>
 
-    <div class="col-12 col-md-2 ml-md-auto footer_menu">
+    <div class="col-12 col-md-2 ml-md-auto footer_menu d-sm-none d-md-flex">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="#">О компании</a>
@@ -540,7 +1094,7 @@
         </ul>
     </div>
 
-    <div class="col-12 col-md-3 ml-md-auto footer_menu">
+    <div class="col-12 col-md-3 ml-md-auto footer_menu d-sm-none d-md-flex">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Коттеджи для свадьбы</a>
@@ -554,33 +1108,65 @@
         </ul>
     </div>
 
-    <div class="col-12  col-md-3 footer_menu">
-        <div class="col-12 "><label id="footer_phone">+7 (917) 123-45-67</label></div>
-        <div class="row">
-            <div class="col-7 col-md-6 ml-md-auto " id="footer_host">Domiktut.ru 2017</div>
-            <div class="col-3 col-md-2 mr-md-1 footer_icon">
-                <a href="#">
-                    <img src="img/vk.png" alt="" width="20" height="20">
-                </a>
-            </div>
+    <div class="col-12  col-md-3 footer_menu d-sm-none d-md-flex">
+        <div class="col-12 ">
+            <label id="footer_phone">+7 (917) 123-45-67</label>
+            <div id="under_phone">
+                <div class="col-md-7  " id="footer_host"><label>Domiktut.ru 2017</label></div>
+                <div class="col-md-3  footer_icon">
+                    <a href="#">
+                        <img src="img/vk.png" alt="" width="20" height="20">
+                    </a>
+                </div>
 
-            <div class="col-2 mr-7 mr-md-5 col-md-3 footer_icon">
-                <a href="#">
-                    <img src="img/vk.png" alt="" width="20" height="20">
-                </a>
+                <div class="col-md-3 footer_icon">
+                    <a href="#">
+                        <img src="img/vk.png" alt="" width="20" height="20">
+                    </a>
+                </div>
             </div>
         </div>
+
+    </div>
+</div>
+<div class="row d-sm-flex d-md-none" id="mobile_footer">
+    <div class="col-8 ml-3">
+        <p>@2017 Аренда коттеджей в Казани</p>
+    </div>
+    <div class="col-2 ml-2">
+        <a href="#navigation_block">Наверх</a>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
         integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
+<script>
+    $('#startdate').daterangepicker({
+        "singleDatePicker": true,
+        "startDate": "09/27/2017",
+        "endDate": "10/03/2017",
+        "opens": "left",
+        "drops": "up"
+    }, function(start, end, label) {
+        console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+    });
+    $('#finishdate').daterangepicker({
+        "singleDatePicker": true,
+        "startDate": "09/27/2017",
+        "endDate": "10/03/2017",
+        "opens": "left",
+        "drops": "up"
+    }, function(start, end, label) {
+        console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+    });
+</script>
 </body>
 </html>
