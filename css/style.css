@@ -6,6 +6,9 @@ body{
 a:hover{
   text-decoration: none;
 }
+.top-mobile-link{
+    margin-top:-40px;
+}
 .header_nav{
   font-size: 17px;
 }
@@ -107,7 +110,21 @@ a:hover{
   width: 100%;
   padding-top:5%;
 }
-
+.date_input{
+  width:100%;
+}
+.mobile_item_description{
+  margin-top:-22px;
+  font-size: 12px;
+  margin-left: 5px;
+  color: gray;
+  padding-right: 25px !important;
+}
+.mobile_item_description p{
+  margin-top: 13px;
+  font-size: 10px;
+  color: black;
+}
 .catalog_item a{
   color: black;
 }
@@ -318,7 +335,59 @@ div.opacity:hover{
 #mobile_footer a{
   color: white;
 }
+.catering_col p{
+  text-align: right;
+  font-weight:bold;
+  margin-bottom:0;
+}
+.bottom_image{
+    margin-bottom:30px;
+    text-align: center;
+}
+.bottom_image img{
+    width:80%;
+}
+.top-radios{
+    width:25rem;
+    padding:0;
+}
+.btn-top-menu{
+    color: #ff6e00;
+    border-color: #ff6e00;
+    background: white;
+}
+.btn-top-menu{
+    width:30%;
+    color: #ff6e00;
+    border-color: #ff6e00;
+    background: white;
+}
+.btn-top-menu.active{
+    color: white;
+    background: #ff6e00;
+}
+#main_map{
+    height:100%;
+}
+.top-mobile-telephone{
+    margin-left: 53%;
+    margin-top: -40px;
+}
+.top-mobile-telephone label{
+    font-size: 16px;
+    font-weight: bold;
+}
 @media (min-width: 320px){
+    .catering_col p{
+        font-size:0.8rem;
+    }
+    .constructor_form{
+        padding-top:0;
+        padding-bottom:0;
+    }
+  #top_logo img{
+      width:10rem !important;
+  }
   .catalog_item_description h3{
     color: #073855;
     font-weight: bold;
@@ -375,6 +444,17 @@ div.opacity:hover{
 
 
 @media (min-width: 768px){
+    .catering_col p{
+
+        font-size:1rem;
+    }
+    .constructor_form{
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+    #top-logo img{
+        width:100%;
+    }
   .catalog_item_description h3{
     color: #073855;
     font-weight: bold;
