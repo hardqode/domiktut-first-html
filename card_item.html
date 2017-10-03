@@ -27,10 +27,19 @@
     <a href="index.html" id="top_logo">
         <img src="img/logo-domiktut4.png" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    <a href="#" class="d-md-none top-mobile-link">
+        <img src="img/vk.png" alt="" width="30" height="30">
+    </a>
+    <a href="#" class="d-md-none top-mobile-link">
+        <img src="img/in.jpg" alt="" width="30" height="30">
+    </a>
+    <button class="navbar-toggler top-mobile-link" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="top-mobile-telephone d-md-none" >
+        <label>+7 (915)018-86-11</label>
+    </div>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav header_nav">
             <li class="nav-item active dropdown">
@@ -54,24 +63,24 @@
     <div class="row" id="search_block">
         <div class="col-12">
             <div class="row">
-                <div class="col-1">
-                    <i class="material-icons" id="phone_icon">phone</i>
+                <div class="col-1 d-none d-md-flex">
+                    <i class="material-icons " id="phone_icon">phone</i>
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-md-8 d-none d-md-flex">
                     <label class="top-telefone">+7 (915)018-86-11</label>
                 </div>
-                <div class="col-2 top-icon">
+                <div class="col-2 top-icon d-none d-md-flex">
                     <a href="#">
                         <img src="img/vk.png" alt="" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-2 top-icon">
+                <div class="col-2 top-icon d-none d-md-flex">
                     <a href="">
                         <img src="img/in.jpg" alt="" width="30" height="30">
                     </a>
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 d-none d-md-block">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Найти коттедж">
                     <span class="input-group-addon" id="search_button"><i class="material-icons">search</i></span>
@@ -84,7 +93,7 @@
 <div class="container">
     <div class="row description_item">
         <div class="col-12 col-md-8">
-            <h2>Введенская слобода</h2>
+            <h2 class="d-none d-md-flex">Введенская слобода</h2>
             <div id="slider">
                 <ul id="lightSlider">
                     <li data-thumb="img/cott/1.jpg">
@@ -132,8 +141,13 @@
                 </ul>
             </div>
         </div>
+
         <div class="col-12 col-md-4 ">
-            <div class="header1">
+            <div class="header1 mt d-md-none">
+                <h3>Введенская слобода</h3>
+                <label >Волоколамское ш. 19 км.</label>
+            </div>
+            <div class="header1 ">
             <h3 >Стоимость</h3>
             </div>
             <div class="row prices">
@@ -148,11 +162,19 @@
                 <div class="col-6"><p>Пн.-Чт.</p></div>
                 <div class="col-6 week_price text-right"><p><strong>10000 руб.</strong></p></div>
             </div>
+
+            <div class="header1 mt">
+                <h4 >Описание недвижимости</h4>
+            </div>
+            <p class="description_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur dignissimos ducimus est fugit ipsam iure maxime, quae reiciendis reprehenderit. Adipisci impedit mollitia officia quisquam, reiciendis saepe sequi tempora ut.</p>
             <div class="header1">
+                <h4 >Дополнительные услуги</h4>
+            </div>
+            <p class="description_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ex facilis, neque nesciunt quos tempora tenetur vel? Adipisci beatae dolor excepturi labore quae ratione recusandae, sapiente vero vitae voluptatibus. Adipisci!</p>
+            <div class="header1 d-none d-md-block">
                 <h4>Кейтеринг</h4>
             </div>
-
-            <div class="btn-group" data-toggle="buttons">
+            <div class="btn-group d-none d-md-flex" data-toggle="buttons">
                 <label class="btn btn-check col-4">
                     <input type="checkbox" checked autocomplete="off"> Салатик
                 </label>
@@ -164,7 +186,7 @@
                 </label>
             </div>
             <br>
-            <div class="btn-group mt" data-toggle="buttons">
+            <div class="btn-group d-none d-md-flex" data-toggle="buttons">
                 <label class="btn btn-check active">
                     <input type="checkbox" checked autocomplete="off"> Шашлык
                 </label>
@@ -175,18 +197,11 @@
                     <input type="checkbox" autocomplete="off"> Десерт
                 </label>
             </div>
-            <div class="row mt">
+            <div class="row mt d-none d-md-flex">
                 <div class="col-6"><a href="#">Скачать меню</a></div>
                 <div class="col-6 text-right">Итого: 900 руб.</div>
+                <div class="col-12 "><a href="#">Рассчитать стоимость кейтеринга</a></div>
             </div>
-            <div class="header1 mt">
-                <h4 >Описание недвижимости</h4>
-            </div>
-            <p class="description_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur dignissimos ducimus est fugit ipsam iure maxime, quae reiciendis reprehenderit. Adipisci impedit mollitia officia quisquam, reiciendis saepe sequi tempora ut.</p>
-            <div class="header1">
-                <h4 >Дополнительные услуги</h4>
-            </div>
-            <p class="description_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ex facilis, neque nesciunt quos tempora tenetur vel? Adipisci beatae dolor excepturi labore quae ratione recusandae, sapiente vero vitae voluptatibus. Adipisci!</p>
         </div>
     </div>
     <div class="row item_media">
