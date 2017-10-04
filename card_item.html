@@ -40,7 +40,7 @@
     <div class="top-mobile-telephone d-md-none" >
         <label>+7 (915)018-86-11</label>
     </div>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
         <ul class="navbar-nav header_nav">
             <li class="nav-item active dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
@@ -89,8 +89,7 @@
         </div>
     </div>
 </nav>
-
-<div class="container">
+<div class="container" id="description-container">
     <div class="row description_item">
         <div class="col-12 col-md-8">
             <h2 class="d-none d-md-flex">Введенская слобода</h2>
@@ -143,14 +142,14 @@
         </div>
 
         <div class="col-12 col-md-4 ">
-            <div class="header1 mt d-md-none">
+            <div class="header1 d-md-none mobile_card_options">
                 <h3>Введенская слобода</h3>
                 <label >Волоколамское ш. 19 км.</label>
             </div>
-            <div class="header1 ">
+            <div class="header1 mobile_card_options" id="price_header">
             <h3 >Стоимость</h3>
             </div>
-            <div class="row prices">
+            <div class="row prices mobile_card_options">
                 <div class="col-6"><p>Пн.-Чт.</p></div>
                 <div class="col-6 week_price text-right"><p><strong>10000 руб.</strong></p></div>
                 <div class="col-6"><p>Пн.-Чт.</p></div>
@@ -163,14 +162,14 @@
                 <div class="col-6 week_price text-right"><p><strong>10000 руб.</strong></p></div>
             </div>
 
-            <div class="header1 mt">
+            <div class="header1 mt mobile_card_options" id="opis_item_header">
                 <h4 >Описание недвижимости</h4>
             </div>
-            <p class="description_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur dignissimos ducimus est fugit ipsam iure maxime, quae reiciendis reprehenderit. Adipisci impedit mollitia officia quisquam, reiciendis saepe sequi tempora ut.</p>
-            <div class="header1">
+            <p class="description_text" id="opis_item_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur dignissimos ducimus est fugit ipsam iure maxime, quae reiciendis reprehenderit. Adipisci impedit mollitia officia quisquam, reiciendis saepe sequi tempora ut.</p>
+            <div class="header1 mobile_card_options" id="more_uslugi_header">
                 <h4 >Дополнительные услуги</h4>
             </div>
-            <p class="description_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ex facilis, neque nesciunt quos tempora tenetur vel? Adipisci beatae dolor excepturi labore quae ratione recusandae, sapiente vero vitae voluptatibus. Adipisci!</p>
+            <p class="description_text" id="more_uslugi_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ex facilis, neque nesciunt quos tempora tenetur vel? Adipisci beatae dolor excepturi labore quae ratione recusandae, sapiente vero vitae voluptatibus. Adipisci!</p>
             <div class="header1 d-none d-md-block">
                 <h4>Кейтеринг</h4>
             </div>
@@ -205,7 +204,7 @@
         </div>
     </div>
     <div class="row item_media">
-        <div class="col-12 col-md-6 ">
+        <div class="col-12 col-md-6 " id="video_block">
             <!--video-->
             <div class="header1">
                 <h2>Видео</h2>
@@ -213,7 +212,7 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZquiizrRdbY?rel=0" allowfullscreen></iframe>
             </div>
-            </div>
+        </div>
         <div class="col-12 col-md-6">
             <div class="header1">
                 <h2>Карта</h2>
@@ -225,22 +224,59 @@
             <!--map-->
         </div>
     </div>
+
     <div class="row feedback">
-        <div class="col-12 header1">
+        <div class="col-12">
+            <div class="header1 mt">
             <h2>Отзывы</h2>
+            </div>
         </div>
-            <div class="col-12 col-md-3">
-                <img src="img/Screenshot%20from%202017-09-29%2018-53-20.png" alt="">
-            </div>
-            <div class="col-12 col-md-3">
-                <img src="img/Screenshot%20from%202017-09-29%2018-53-20.png" alt="">
-            </div>
-            <div class="col-12 col-md-3">
-                <img src="img/Screenshot%20from%202017-09-29%2018-53-20.png" alt="">
-            </div>
-            <div class="col-12 col-md-3">
-                <img src="img/Screenshot%20from%202017-09-29%2018-53-20.png" alt="">
-            </div>
+        <div class="col-12">
+            <ul class="responsive-slider">
+                <li data-thumb="img/cott/1.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/2.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/3.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/4.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/5.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/6.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/7.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/8.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/9.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/10.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/11.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/12.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/13.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+                <li data-thumb="img/cott/14.jpg">
+                    <img src="img/u603.jpg" alt="">
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <!-- FOOTER -->
@@ -342,13 +378,52 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#lightSlider').lightSlider({
-            gallery: true,
+            gallery: false,
+            pager:0,
             item: 1,
             loop:true,
             slideMargin: 10,
-            thumbItem: 9
+            thumbItem: 9,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                    }
+                },
+                {
+                    breakpoint:0,
+                    settings: {
+                    }
+                }
+            ]
+        });
+        $('.responsive-slider').lightSlider({
+            item:4,
+            loop:true,
+            slideMove:2,
+            easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+            speed:600,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                        item:3,
+                        slideMove:1,
+                        slideMargin:6,
+                    }
+                },
+                {
+                    breakpoint:480,
+                    settings: {
+                        item:1,
+                        slideMove:1,
+                        slideMargin:6
+                    }
+                }
+            ]
         });
     });
+
 
 </script>
 </body>
