@@ -421,6 +421,9 @@ font-weight: bold;
 #slider{
     margin-bottom:40px;
 }
+#slider_gallery ul li img{
+    width:100%;
+}
 #price_slider{
     width:80%;
     margin-left: 10%;
