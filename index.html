@@ -20,6 +20,8 @@
     <!-- Include Date Range Picker -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <link href="css/nouislider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -86,26 +88,33 @@
                     <span class="input-group-addon" id="search_button"><i class="material-icons">search</i></span>
                 </div>
             </div>
-            <div class="btn-group col-12 d-md-none top-radios" data-toggle="buttons">
-                <label class="btn btn-top-menu active" id="spisok">
-                    <input type="radio" checked autocomplete="off"> Список
-                </label>
-                <label class="btn btn-top-menu">
-                    <input type="radio" autocomplete="off" id="filter"> Фильтр
-                </label>
-                <label class="btn btn-top-menu">
-                    <input type="radio" autocomplete="off" id="button_map"> Карта
-                </label>
-                <label class="btn btn-top-menu">
-                    <input type="radio" autocomplete="off"> Поиск
-                </label>
-            </div>
+        </div>
+
+
+    </div>
+    <div class="row d-md-none" style="width: 110%;">
+        <div class="btn-group col-12 d-md-none top-radios" data-toggle="buttons" id="top_menu_section">
+            <label class="btn btn-top-menu active" id="spisok">
+                <input type="radio" checked autocomplete="off"> Список
+            </label>
+            <label class="btn btn-top-menu" id="filter">
+                <input type="radio" autocomplete="off" > Фильтр
+            </label>
+            <label class="btn btn-top-menu" id="button_map">
+                <input type="radio" autocomplete="off" > Карта
+            </label>
+            <label class="btn btn-top-menu" id="mobile_search_btn">
+                <input type="radio" autocomplete="off"> <i class="material-icons" >search</i>
+            </label>
+        </div>
+        <div class="col-12 mobile_search d-none" id="mobile_search_section">
+            <i class="material-icons orange_text" id="exit_mobile_seach">clear</i><input class="form-control" type="text" placeholder="Введите название коттеджа">
         </div>
     </div>
 </nav>
 
 <div class="row">
-    <div class="col-12  d-md-inline" id="constructor">
+    <div class="col-12 d-none d-md-inline" id="constructor">
         <div class="constructor">
             <div class="row constructor_form mx-auto">
                 <div class="col-12 col-md-4 mr-md-0 ml-auto section">
@@ -156,11 +165,12 @@
                         <div class="w-100"></div>
                         <div class="col-12">
                             <p>Цена:</p>
-                            <section class="range-slider">
-                                <span class="rangeValues"></span>
-                                <input value="500" min="100" max="600" step="5" type="range">
-                                <input value="500" min="100" max="600" step="5" type="range">
-                            </section>
+                            <!--<section class="range-slider">-->
+                                <!--<span class="rangeValues"></span>-->
+                                <!--&lt;!&ndash;<input value="500" min="100" max="600" step="5" type="range">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<input value="500" min="100" max="600" step="5" type="range">&ndash;&gt;-->
+                            <!--</section>-->
+                            <div id="price_slider"></div>
                         </div>
                         <div class="col d-md-none">
                             <p>Спален</p>
@@ -241,7 +251,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-9 ">
+                        <div class="col-9 mt">
                             <button type="button" class="btn btn-primary btn-block">Поиск</button>
                         </div>
                     </div>
@@ -253,7 +263,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="row" id="map">
+        <div class="row d-none" id="map">
             <div class="col-12 d-md-none" id="main_map">
                 <div class="embed-responsive embed-responsive-1by1">
                     <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287089.66150478285!2d48.7931280271237!3d55.79518301843937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1506689478228" allowfullscreen></iframe>
@@ -736,23 +746,33 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/wNumb.js"></script>
 <script>
 
     $(document).ready(function(){
         $('#spisok').click(function(){
-            $('#constructor').hide();
-            $('#catalog').show();
-            $('#map').hide();
+            $('#constructor').addClass('d-none');
+            $('#catalog').removeClass('d-none');
+            $('#map').addClass('d-none');
+        });
+        $('#mobile_search_btn').click(function(){
+            $('#top_menu_section').hide();
+            $('#mobile_search_section').removeClass('d-none');
+        });
+        $('#exit_mobile_seach').click(function(){
+            $('#top_menu_section').show();
+            $('#mobile_search_section').addClass('d-none');
         });
         $('#filter').click(function(){
-            $('#constructor').show();
-            $('#catalog').hide();
-            $('#map').hide();
+            $('#constructor').removeClass('d-none');
+            $('#catalog').addClass('d-none');
+            $('#map').addClass('d-none');
         });
         $('#button_map').click(function(){
-            $('#constructor').hide();
-            $('#catalog').hide();
-            $('#map').show();
+            $('#constructor').addClass('d-none');
+            $('#catalog').addClass('d-none');
+            $('#map').removeClass('d-none');
         });
         $('#startdate').daterangepicker({
             "singleDatePicker": true,
@@ -772,6 +792,27 @@
         }, function(start, end, label) {
             console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
         });
+    });
+
+    var keypressSlider = document.getElementById('price_slider');
+    var input0 = document.getElementById('input-with-keypress-0');
+    var input1 = document.getElementById('input-with-keypress-1');
+    var inputs = [input0, input1];
+
+    noUiSlider.create(keypressSlider, {
+        start: [10000, 850000],
+        connect: true,
+        step:1000,
+        direction: 'ltr',
+        tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
+        range: {
+            'min': [10000],
+            'max': 100000
+        }
+    });
+
+    keypressSlider.noUiSlider.on('update', function( values, handle ) {
+        inputs[handle].value = values[handle];
     });
 
 </script>

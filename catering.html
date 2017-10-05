@@ -11,7 +11,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
           integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+
 
     <!-- Include Required Prerequisites -->
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -20,12 +20,11 @@
     <!-- Include Date Range Picker -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/lightslider.js"></script>
-
+    <link rel="stylesheet" href="css/lightslider.css">
     <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
-    <script src="js/lightgallery.js"></script>
     <link type="text/css" rel="stylesheet" href="css/slider.css" />
+    <link href="css/nouislider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navigation_block">
@@ -106,57 +105,68 @@
         <div class="row">
             <div class="btn-group col-12" data-toggle="buttons">
                 <label class="btn btn-check col-4">
-                    <input type="checkbox" checked autocomplete="off"> Салатик
+                    <input type="checkbox" autocomplete="off" id="salad" value="150"> Салатик
                 </label>
                 <label class="btn btn-check col-4" >
-                    <input type="checkbox" autocomplete="off"> Первое
+                    <input type="checkbox" autocomplete="off" id="fisrt_lunch_btn" value="150"> Первое
                 </label>
                 <label class="btn btn-check col-4">
-                    <input type="checkbox" autocomplete="off"> Второе
+                    <input type="checkbox" autocomplete="off" id="second_lunch_btn" value="300"> Второе
                 </label>
             </div>
             <br>
             <div class="btn-group col-12 mt" data-toggle="buttons">
-                <label class="btn btn-check active">
-                    <input type="checkbox" checked autocomplete="off"> Шашлык
+                <label class="btn btn-check">
+                    <input type="checkbox" autocomplete="off" id="grill" value="100"> Шашлык
                 </label>
                 <label class="btn btn-check">
-                    <input type="checkbox" autocomplete="off"> Напиток
+                    <input type="checkbox" autocomplete="off" id="drinks" value="30"> Напиток
                 </label>
                 <label class="btn btn-check">
-                    <input type="checkbox" autocomplete="off"> Десерт
+                    <input type="checkbox" autocomplete="off" id="candys" value="50"> Десерт
                 </label>
+            </div>
+            <div class="col-12 catering_col d-none d-md-inline">
+                <div class="header1 mt">
+                    <h3>Колличество человек</h3>
+                </div>
+                <!--<input value="500" min="100" max="600" step="5" type="range">-->
+                <div id="slider"></div>
+                <p class="mt">Всего: <strong><span id="total_price"></span></strong> руб.</p>
+                <p>Скидка при заказе через Domiktut: 2 000 руб.</p>
+                <p>Итого: 54 956 руб.</p>
+                <p style="margin-top: 10px;">Информация по телефону 8-9270-320-223</p>
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 catering_col order-2 order-md-3">
+    <div class="col-12 col-md-6 order-3 order-md-2">
+        <div id="slider">
+            <ul id="lightSlider">
+                <li data-thumb="img/cott/1.jpg">
+                    <img src="img/cott/1.jpg" />
+                </li>
+                <li data-thumb="img/cott/2.jpg">
+                    <img src="img/cott/2.jpg" />
+                </li>
+                <li data-thumb="img/cott/3.jpg">
+                    <img src="img/cott/3.jpg" />
+                </li>
+                <li data-thumb="img/cott/4.jpg">
+                    <img src="img/cott/4.jpg" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 catering_col d-inline d-md-none">
         <div class="header1 mt">
             <h3>Колличество человек</h3>
         </div>
-        <input value="500" min="100" max="600" step="5" type="range">
-        <p>Всего: 56 956 руб.</p>
+        <!--<input value="500" min="100" max="600" step="5" type="range">-->
+        <div id="slider"></div>
+        <p class="mt">Всего: <strong><span id="total_price"></span></strong> руб.</p>
         <p>Скидка при заказе через Domiktut: 2 000 руб.</p>
         <p>Итого: 54 956 руб.</p>
         <p style="margin-top: 10px;">Информация по телефону 8-9270-320-223</p>
-    </div>
-    <div class="col-6 order-3 order-md-2">
-        <!--<div id="slider_catering">-->
-            <!--<ul id="lightSlider">-->
-            <!--<li data-thumb="img/cott/1.jpg">-->
-            <!--<img src="img/cott/1.jpg" />-->
-            <!--</li>-->
-            <!--<li data-thumb="img/cott/2.jpg">-->
-            <!--<img src="img/cott/2.jpg" />-->
-            <!--</li>-->
-            <!--<li data-thumb="img/cott/3.jpg">-->
-            <!--<img src="img/cott/3.jpg" />-->
-            <!--</li>-->
-            <!--<li data-thumb="img/cott/4.jpg">-->
-            <!--<img src="img/cott/4.jpg" />-->
-            <!--</li>-->
-
-            <!--</ul>-->
-        <!--</div>-->
     </div>
     <div class="order-4 col-12 bottom_image mt">
         <img src="img/excursions-1.jpg" alt="">
@@ -252,6 +262,7 @@
         <a href="#navigation_block">Наверх</a>
     </div>
 </div>
+<input id="input-with-keypress-0" type="hidden">
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -264,17 +275,75 @@
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/lightgallery.js"></script>
 <script src="js/lightslider.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/wNumb.js"></script>
 <script type="text/javascript">
+    function calculateCatering() {
+        var arr = 0;
+        $.each($('.ok'), function(){
+            arr+=parseFloat($(this).find('input').val());
+        });
+        return arr;
+    }
     $(document).ready(function() {
         $('#lightSlider').lightSlider({
             gallery: true,
+            pager:3,
             item: 1,
             loop:true,
             slideMargin: 10,
-            thumbItem: 9
+            thumbItem: 9,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                    }
+                },
+                {
+                    breakpoint:0,
+                    settings: {
+                    }
+                }
+            ]
+        });
+        $('.btn-check').on('click', function() {
+            $(this).toggleClass('ok');
+            updateTotalPrice()
         });
     });
+
+    function updateTotalPrice() {
+        $('[id=total_price]').text(calculateCatering() * parseFloat($('#input-with-keypress-0').val()));
+    }
+
+    var keypressSlider = $('[id=slider]');
+    var input0 = document.getElementById('input-with-keypress-0');
+//    var input1 = document.getElementById('input-with-keypress-1');
+    var inputs = [input0];
+
+    $.each(keypressSlider, function () {
+        noUiSlider.create(this, {
+            start: [1],
+            connect: true,
+            direction: 'ltr',
+            step: 1,
+            tooltips: [ wNumb({ decimals: 0})],
+            range: {
+                'min': [1],
+                'max': 100
+            }
+        });
+        this.noUiSlider.on('update', function( values, handle ) {
+            inputs[handle].value = values[handle];
+            updateTotalPrice()
+//            console.log(inputs[handle].value * calculateCatering());
+        });
+    })
+
+
+
 </script>
 </body>
 </html>

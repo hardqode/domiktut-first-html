@@ -51,8 +51,13 @@ a:hover{
 #search_button i {
   color:white;
 }
+#mobile_search_btn{
+    padding: 0;
+    width: 20%;
+    padding-top: 8px;
+}
 .top-telefone{
-  font-size: 22px;
+  font-size: 1.35rem;
   font-weight: bold;
 }
 .top-icon{
@@ -138,6 +143,13 @@ div.opacity{
 }
 div.opacity:hover{
   background-color: rgba(255,255,255,0.5);
+}
+.btn-primary{
+    background: #2196f3;
+    border-color: #2196f3;
+}
+.noUi-connect{
+    background: #2196f3;
 }
 #btn-dover{
   position: absolute;
@@ -291,8 +303,8 @@ div.opacity:hover{
   width:300px;
 }
 .btn-check{
-  color: royalblue;
-  border-color: royalblue;
+  color: #2196f3;
+  border-color: #2196f3;
   background: white;
   font-size: 14px;
   margin-bottom: 20px;
@@ -313,7 +325,7 @@ width:33%;
 }
 .btn-check.active{
 color: white;
-background: royalblue;
+background: #2196f3;
 }
 .text-right{
 text-align: right;
@@ -364,7 +376,18 @@ width:80%;
 }
 .top-radios{
 width:25rem;
-padding:0;
+}
+.mobile_search input{
+    border-radius: 10px;
+    border:1px solid #ff6e00;
+    margin-top: -40px;
+}
+.mobile_search i{
+    margin-left: 90%;
+    font-weight: bold;
+}
+#mobile_search_section{
+    margin-top: 10px;
 }
 .btn-top-menu{
 color: #ff6e00;
@@ -394,6 +417,22 @@ font-weight: bold;
 }
 #video_block{
     margin-bottom:10px;
+}
+#slider{
+    margin-bottom:40px;
+}
+#price_slider{
+    width:80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+#total_price{
+    font-weight: bold;
+}
+.noUi-tooltip{
+    font-size: 14px;
+    height: 33px;
+    top: 30px;
 }
 @media (min-width: 320px){
     .header1{
