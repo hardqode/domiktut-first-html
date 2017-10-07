@@ -266,8 +266,8 @@
     <div class="container">
         <div class="row d-none" id="map">
             <div class="col-12 d-md-none" id="main_map">
-                <div class="embed-responsive embed-responsive-1by1">
-                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287089.66150478285!2d48.7931280271237!3d55.79518301843937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1506689478228" allowfullscreen></iframe>
+                <div id="ifr">
+                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287089.66150478285!2d48.7931280271237!3d55.79518301843937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1506689478228" allowfullscreen height="300"></iframe>
                 </div>
             </div>
         </div>
@@ -333,12 +333,15 @@
                                     </div>
                                 </div>
                                 <div class="mobile_item_description d-md-none col-12">
+                                    <label id="geoposition">Волоколамское ш. 19 км.</label>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
                                     <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                            <span>10000-45000 p.</span>
+                            <div class=" d-md-none col-12 catalog_item_price2">
+                                <span>10000-45000 p.</span>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -354,27 +357,50 @@
                                     <span>10000-45000 p.</span>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-6 col-md-12 catalog_item_description">
                             <h3>Введенская слобода</h3>
                             <div class="row description_icons">
-                                <div class="col-12 col-md-6 d-none d-md-block">
-                                    <i class="material-icons">tag_faces</i>
-                                    <label>Хамам</label>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-md-6 d-none d-md-block">
-                                    <i class="material-icons">tag_faces</i>
-                                    <label>Бассейн 50м2</label>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бассейн 50м2</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="w-100"></div>
-                                <div class="col-12 col-md-6 d-none d-md-block">
-                                    <i class="material-icons">tag_faces</i>
-                                    <label>на 50 человек</label>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>на 50 человек</label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-md-6 d-none d-md-block">
-                                    <i class="material-icons">tag_faces</i>
-                                    <label>Бильярд, теннис</label>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бильярд, теннис</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="mobile_item_description d-md-none col-12">
                                     <label id="geoposition">Волоколамское ш. 19 км.</label>
@@ -383,335 +409,503 @@
                                     <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                            <span>10000-45000 p.</span>
+                            <div class=" d-md-none col-12 catalog_item_price2">
+                                <span>10000-45000 p.</span>
+                            </div>
                         </div>
                     </div>
                 </a>
-            </div><div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-            <a href="card_item.html">
-                <div class="row catalog_row">
-                    <div class="col-6 col-md-12 catalog_item_img">
-                        <div class="item_img">
-                            <div class="opacity">
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                                <div class="d-none d-md-flex catalog_item_price">
+                                    <span>10000-45000 p.</span>
+                                </div>
                             </div>
-                            <div class="d-none d-md-flex catalog_item_price">
+                        </div>
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бассейн 50м2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>на 50 человек</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бильярд, теннис</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <label id="geoposition">Волоколамское ш. 19 км.</label>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                                </div>
+                            </div>
+                            <div class=" d-md-none col-12 catalog_item_price2">
                                 <span>10000-45000 p.</span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-6 col-md-12 catalog_item_description">
-                        <h3>Введенская слобода</h3>
-                        <div class="row description_icons">
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Хамам</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бассейн 50м2</label>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>на 50 человек</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бильярд, теннис</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <label id="geoposition">Волоколамское ш. 19 км.</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                                <div class="d-none d-md-flex catalog_item_price">
+                                    <span>10000-45000 p.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-            </a>
-        </div><div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-            <a href="card_item.html">
-                <div class="row catalog_row">
-                    <div class="col-6 col-md-12 catalog_item_img">
-                        <div class="item_img">
-                            <div class="opacity">
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бассейн 50м2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>на 50 человек</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бильярд, теннис</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <label id="geoposition">Волоколамское ш. 19 км.</label>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                                </div>
                             </div>
-                            <div class="d-none d-md-flex catalog_item_price">
+                            <div class=" d-md-none col-12 catalog_item_price2">
                                 <span>10000-45000 p.</span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-6 col-md-12 catalog_item_description">
-                        <h3>Введенская слобода</h3>
-                        <div class="row description_icons">
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Хамам</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бассейн 50м2</label>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>на 50 человек</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бильярд, теннис</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <label id="geoposition">Волоколамское ш. 19 км.</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                                <div class="d-none d-md-flex catalog_item_price">
+                                    <span>10000-45000 p.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-            </a>
-        </div><div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-            <a href="card_item.html">
-                <div class="row catalog_row">
-                    <div class="col-6 col-md-12 catalog_item_img">
-                        <div class="item_img">
-                            <div class="opacity">
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бассейн 50м2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>на 50 человек</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бильярд, теннис</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <label id="geoposition">Волоколамское ш. 19 км.</label>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                                </div>
                             </div>
-                            <div class="d-none d-md-flex catalog_item_price">
+                            <div class=" d-md-none col-12 catalog_item_price2">
                                 <span>10000-45000 p.</span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-6 col-md-12 catalog_item_description">
-                        <h3>Введенская слобода</h3>
-                        <div class="row description_icons">
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Хамам</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бассейн 50м2</label>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>на 50 человек</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бильярд, теннис</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <label id="geoposition">Волоколамское ш. 19 км.</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                                <div class="d-none d-md-flex catalog_item_price">
+                                    <span>10000-45000 p.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-            </a>
-        </div><div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-            <a href="card_item.html">
-                <div class="row catalog_row">
-                    <div class="col-6 col-md-12 catalog_item_img">
-                        <div class="item_img">
-                            <div class="opacity">
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бассейн 50м2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>на 50 человек</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бильярд, теннис</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <label id="geoposition">Волоколамское ш. 19 км.</label>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                                </div>
                             </div>
-                            <div class="d-none d-md-flex catalog_item_price">
+                            <div class=" d-md-none col-12 catalog_item_price2">
                                 <span>10000-45000 p.</span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-6 col-md-12 catalog_item_description">
-                        <h3>Введенская слобода</h3>
-                        <div class="row description_icons">
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Хамам</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бассейн 50м2</label>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>на 50 человек</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бильярд, теннис</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <label id="geoposition">Волоколамское ш. 19 км.</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                                <div class="d-none d-md-flex catalog_item_price">
+                                    <span>10000-45000 p.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-            </a>
-        </div><div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-            <a href="card_item.html">
-                <div class="row catalog_row">
-                    <div class="col-6 col-md-12 catalog_item_img">
-                        <div class="item_img">
-                            <div class="opacity">
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бассейн 50м2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>на 50 человек</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бильярд, теннис</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <label id="geoposition">Волоколамское ш. 19 км.</label>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                                </div>
                             </div>
-                            <div class="d-none d-md-flex catalog_item_price">
+                            <div class=" d-md-none col-12 catalog_item_price2">
                                 <span>10000-45000 p.</span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-6 col-md-12 catalog_item_description">
-                        <h3>Введенская слобода</h3>
-                        <div class="row description_icons">
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Хамам</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бассейн 50м2</label>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>на 50 человек</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бильярд, теннис</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <label id="geoposition">Волоколамское ш. 19 км.</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                                <div class="d-none d-md-flex catalog_item_price">
+                                    <span>10000-45000 p.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-            </a>
-        </div><div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-            <a href="card_item.html">
-                <div class="row catalog_row">
-                    <div class="col-6 col-md-12 catalog_item_img">
-                        <div class="item_img">
-                            <div class="opacity">
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бассейн 50м2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>на 50 человек</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бильярд, теннис</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <label id="geoposition">Волоколамское ш. 19 км.</label>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                                </div>
                             </div>
-                            <div class="d-none d-md-flex catalog_item_price">
+                            <div class=" d-md-none col-12 catalog_item_price2">
                                 <span>10000-45000 p.</span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-6 col-md-12 catalog_item_description">
-                        <h3>Введенская слобода</h3>
-                        <div class="row description_icons">
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Хамам</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бассейн 50м2</label>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>на 50 человек</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бильярд, теннис</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <label id="geoposition">Волоколамское ш. 19 км.</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
+                <a href="card_item.html">
+                    <div class="row catalog_row">
+                        <div class="col-6 col-md-12 catalog_item_img">
+                            <div class="item_img">
+                                <div class="opacity">
+                                </div>
+                                <div class="d-none d-md-flex catalog_item_price">
+                                    <span>10000-45000 p.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-            </a>
-        </div><div class="col-12 col-md-4  mr-auto ml-auto  mr-md-0 ml-md-0 catalog_item">
-            <a href="card_item.html">
-                <div class="row catalog_row">
-                    <div class="col-6 col-md-12 catalog_item_img">
-                        <div class="item_img">
-                            <div class="opacity">
+                        <div class="col-6 col-md-12 catalog_item_description">
+                            <h3>Введенская слобода</h3>
+                            <div class="row description_icons">
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бассейн 50м2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>на 50 человек</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block">
+                                    <div class="row">
+                                        <div class="col-3 mr-auto">
+                                            <i class="material-icons">tag_faces</i>
+                                        </div>
+                                        <div class="col-9 ml-auto">
+                                            <label>Бильярд, теннис</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <label id="geoposition">Волоколамское ш. 19 км.</label>
+                                </div>
+                                <div class="mobile_item_description d-md-none col-12">
+                                    <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
+                                </div>
                             </div>
-                            <div class="d-none d-md-flex catalog_item_price">
+                            <div class=" d-md-none col-12 catalog_item_price2">
                                 <span>10000-45000 p.</span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-6 col-md-12 catalog_item_description">
-                        <h3>Введенская слобода</h3>
-                        <div class="row description_icons">
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Хамам</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бассейн 50м2</label>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>на 50 человек</label>
-                            </div>
-                            <div class="col-12 col-md-6 d-none d-md-block">
-                                <i class="material-icons">tag_faces</i>
-                                <label>Бильярд, теннис</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <label id="geoposition">Волоколамское ш. 19 км.</label>
-                            </div>
-                            <div class="mobile_item_description d-md-none col-12">
-                                <p>Сауна, бассейн, русский бильярд, до 30 человек</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" d-md-none col-6 ml-6 catalog_item_price2">
-                        <span>10000-45000 p.</span>
-                    </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
             </div>
         </div>
     </div>
