@@ -28,20 +28,23 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navigation_block">
-    <a href="index.html" id="top_logo">
-        <img src="img/logo-domiktut4.png" alt="">
-    </a>
-    <a href="#" class="d-md-none top-mobile-link">
-        <img src="img/vk.png" alt="" width="30" height="30">
-    </a>
-    <a href="#" class="d-md-none top-mobile-link">
-        <img src="img/in.jpg" alt="" width="30" height="30">
-    </a>
+    <div class="jsutify-content-end">
+        <a href="index.html" id="top_logo">
+            <img src="img/logo-domiktut4.png" alt="">
+        </a>
+        <a href="#" class="d-md-none top-mobile-link">
+            <img src="img/vk.png" alt="" width="30" height="30">
+        </a>
+        <a href="#" class="d-md-none top-mobile-link">
+            <img src="img/in.jpg" alt="" width="30" height="30">
+        </a>
+
+    </div>
     <button class="navbar-toggler top-mobile-link" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="top-mobile-telephone d-md-none" >
+    <div class="top-mobile-telephone d-md-none col-12" >
         <label>+7 (915)018-86-11</label>
     </div>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
@@ -90,6 +93,27 @@
                     <span class="input-group-addon" id="search_button"><i class="material-icons">search</i></span>
                 </div>
             </div>
+        </div>
+
+
+    </div>
+    <div class="row d-md-none" style="width: 110%;">
+        <div class="btn-group col-12 d-md-none top-radios" data-toggle="buttons" id="top_menu_section">
+            <label class="btn btn-top-menu active" id="spisok">
+                <input type="radio" checked autocomplete="off"> Список
+            </label>
+            <label class="btn btn-top-menu" id="filter">
+                <input type="radio" autocomplete="off" > Фильтр
+            </label>
+            <label class="btn btn-top-menu" id="button_map">
+                <input type="radio" autocomplete="off" > Карта
+            </label>
+            <label class="btn btn-top-menu" id="mobile_search_btn">
+                <input type="radio" autocomplete="off"> <i class="material-icons" >search</i>
+            </label>
+        </div>
+        <div class="col-12 mobile_search d-none" id="mobile_search_section">
+            <i class="material-icons orange_text" id="exit_mobile_seach">clear</i><input class="form-control" type="text" placeholder="Введите название коттеджа">
         </div>
     </div>
 </nav>
