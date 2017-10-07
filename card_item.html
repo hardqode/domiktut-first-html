@@ -175,30 +175,30 @@
             </div>
             <div class="btn-group d-none d-md-flex" data-toggle="buttons">
                 <label class="btn btn-check col-4">
-                    <input type="checkbox" checked autocomplete="off"> Салатик
+                    <input type="checkbox" checked autocomplete="off" value="150"> Салатик
                 </label>
                 <label class="btn btn-check col-4" >
-                    <input type="checkbox" autocomplete="off"> Первое
+                    <input type="checkbox" autocomplete="off" value="150"> Первое
                 </label>
                 <label class="btn btn-check col-4">
-                    <input type="checkbox" autocomplete="off"> Второе
+                    <input type="checkbox" autocomplete="off" value="300"> Второе
                 </label>
             </div>
             <br>
             <div class="btn-group d-none d-md-flex" data-toggle="buttons">
-                <label class="btn btn-check active">
-                    <input type="checkbox" checked autocomplete="off"> Шашлык
+                <label class="btn btn-check">
+                    <input type="checkbox" autocomplete="off" value="100"> Шашлык
                 </label>
                 <label class="btn btn-check">
-                    <input type="checkbox" autocomplete="off"> Напиток
+                    <input type="checkbox" autocomplete="off" value="30"> Напиток
                 </label>
                 <label class="btn btn-check">
-                    <input type="checkbox" autocomplete="off"> Десерт
+                    <input type="checkbox" autocomplete="off" value="50"> Десерт
                 </label>
             </div>
             <div class="row mt d-none d-md-flex">
                 <div class="col-6"><a href="#">Скачать меню</a></div>
-                <div class="col-6 text-right">Итого: 900 руб.</div>
+                <div class="col-6 text-right">Итого: <span id="total_price"></span> руб.</div>
                 <div class="col-12 "><a href="#">Рассчитать стоимость кейтеринга</a></div>
             </div>
         </div>
@@ -376,6 +376,20 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/lightslider.js"></script>
 <script type="text/javascript">
+    function calculateCatering() {
+        var arr = 0;
+        $.each($('.ok'), function(){
+            arr+=parseFloat($(this).find('input').val());
+        });
+        return arr;
+    }
+    function updateTotalPrice() {
+        $('[id=total_price]').text(calculateCatering());
+    }
+    $('.btn-check').on('click', function() {
+        $(this).toggleClass('ok');
+        updateTotalPrice()
+    });
     $(document).ready(function() {
         $('#lightSlider').lightSlider({
             gallery: false,
@@ -423,6 +437,7 @@
             ]
         });
     });
+
 
 
 </script>
