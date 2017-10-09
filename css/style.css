@@ -95,7 +95,7 @@ a:hover{
   margin-top: 20px;
 }
 .second_section button{
-  margin-top: 25px;
+  margin-top: 0;
 }
 .section p{
   margin-bottom: 3px;
@@ -402,7 +402,7 @@ text-align: center;
 
 }
 #first_section_constuctor{
-    margin-left:30%;
+    margin-left:20%;
 }
 .top-radios{
     padding:0;
@@ -663,7 +663,7 @@ display: none;
 
 @media (min-width: 768px){
     #first_section_constuctor{
-        margin-left: 30%;
+        margin-left: 20%;
         padding-top: 20px;
     }
     .add_icon{
@@ -722,7 +722,11 @@ display: none;
         margin-bottom:20px;
         border-right: 0 solid lightgray;
         border-left: 0 solid lightgray;
+        border-bottom: 0;
         padding: 0;
+    }
+    #opis_item_header {
+        border-bottom: 1px solid lightgray;
     }
 #top_logo img{
     margin-left:40px;

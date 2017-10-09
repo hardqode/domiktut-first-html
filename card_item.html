@@ -198,32 +198,8 @@
             <div class="header1 d-none d-md-block">
                 <h4>Кейтеринг</h4>
             </div>
-            <div class="btn-group d-none d-md-flex" data-toggle="buttons">
-                <label class="btn btn-check col-4">
-                    <input type="checkbox" checked autocomplete="off" value="150"> Салатик
-                </label>
-                <label class="btn btn-check col-4" >
-                    <input type="checkbox" autocomplete="off" value="150"> Первое
-                </label>
-                <label class="btn btn-check col-4">
-                    <input type="checkbox" autocomplete="off" value="300"> Второе
-                </label>
-            </div>
-            <br>
-            <div class="btn-group d-none d-md-flex" data-toggle="buttons">
-                <label class="btn btn-check">
-                    <input type="checkbox" autocomplete="off" value="100"> Шашлык
-                </label>
-                <label class="btn btn-check">
-                    <input type="checkbox" autocomplete="off" value="30"> Напиток
-                </label>
-                <label class="btn btn-check">
-                    <input type="checkbox" autocomplete="off" value="50"> Десерт
-                </label>
-            </div>
             <div class="row mt d-none d-md-flex">
-                <div class="col-6"><a href="#">Скачать меню</a></div>
-                <div class="col-6 text-right">Итого: <span id="total_price"></span> руб.</div>
+                <div class="col-12"><a href="#">Скачать меню</a></div>
                 <div class="col-12 "><a href="#">Рассчитать стоимость кейтеринга</a></div>
             </div>
         </div>
@@ -415,8 +391,26 @@
         $(this).toggleClass('ok');
         updateTotalPrice()
     });
+
     $(document).ready(function() {
         $('#lightSlider').lightSlider({
+            gallery:true,
+            pager:9,
+            item: 1,
+            loop:true,
+            slideMargin: 10,
+            thumbItem: 9,
+            responsive : [
+                {
+                    breakpoint:780,
+                    settings: {
+                        gallery: false,
+                        pager:0
+                    }
+                }
+            ]
+        });
+        $('#mobileLightSlider').lightSlider({
             gallery: false,
             pager:0,
             item: 1,
