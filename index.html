@@ -121,9 +121,9 @@
     <div class="col-12 d-none d-md-inline" id="constructor">
         <div class="constructor">
             <div class="row constructor_form mx-auto">
-                <div class="col-12 col-md-4 ml-auto mr-auto section" id="first_section_constuctor">
-                    <h4>Найдите коттедж на Domiktut</h4>
-                    <h5>Настоящие фотки. Дешево. Сердито.</h5>
+                <div class="col-12 col-md-4 ml-md-8 section" id="first_section_constuctor">
+                    <h4 class="d-none d-md-inline">Найдите коттедж на Domiktut</h4>
+                    <h5 class="d-none d-md-inline">Настоящие фотки. Дешево. Сердито.</h5>
                     <div class="row">
                         <div class="col">
                             <p>Бассейн</p>
@@ -169,11 +169,6 @@
                         <div class="w-100"></div>
                         <div class="col-12">
                             <p>Цена:</p>
-                            <!--<section class="range-slider">-->
-                                <!--<span class="rangeValues"></span>-->
-                                <!--&lt;!&ndash;<input value="500" min="100" max="600" step="5" type="range">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<input value="500" min="100" max="600" step="5" type="range">&ndash;&gt;-->
-                            <!--</section>-->
                             <div id="price_slider"></div>
                         </div>
                         <div class="col d-md-none">
@@ -196,7 +191,7 @@
                                 <option>5</option>
                             </select>
                         </div>
-                        <div class="col d-md-none">
+                        <div class="col-12 d-md-none">
                             <p>Расположение</p>
                             <select class="form-control">
                                 <option>1</option>
@@ -209,17 +204,17 @@
                     </div>
                     <div class="row align-items-end" id="buttons">
                         <div class="col-3 col-md-4 d-none d-md-flex second_btn">
-                            <a href="#">Сбросить фильтр</a>
+                            <button >Сбросить фильтр</button>
                         </div>
                         <div class="col-6 mx-auto col-md-4">
                             <button type="button" class="btn btn-primary btn-block">Поиск</button>
                         </div>
                         <div class="col-3 col-md-4 d-none d-md-flex" id="more_search">
-                            <a href="#" id="open_more_seacrh">Расширенный поиск</a>
+                            <button id="open_more_seacrh">Расширенный поиск</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mr-auto d-none second_section" id="more_search_container">
+                <div class="col-md-3 d-none second_section" id="more_search_container">
                     <p>Количество спален</p>
                     <select class="form-control">
                         <option>1</option>
@@ -266,9 +261,7 @@
     <div class="container">
         <div class="row d-none" id="map">
             <div class="col-12 d-md-none" id="main_map">
-                <div id="ifr">
-                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287089.66150478285!2d48.7931280271237!3d55.79518301843937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1506689478228" allowfullscreen height="300"></iframe>
-                </div>
+                <div id="map_frame"></div>
             </div>
         </div>
     </div>
@@ -297,7 +290,7 @@
                                             <i class="material-icons">tag_faces</i>
                                         </div>
                                         <div class="col-9 ml-auto">
-                                            <label>Хамам Хамам Хамам Хамам Хамам Хамам</label>
+                                            <label>Хамам Хамам </label>
                                         </div>
                                     </div>
                                 </div>
@@ -1000,9 +993,6 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
         integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
@@ -1016,11 +1006,75 @@
 <script src="js/wNumb.js"></script>
 <script>
 
-    $(document).ready(function(){
-        $('#open_more_seacrh').on('click',function(){
-            $('#first_section_constuctor').removeClass('mr-auto');
-            $('#more_search_container').removeClass('d-none');
+    // This example displays a marker at the center of Australia.
+    // When the user clicks the marker, an info window opens.
+
+    function initMap() {
+        var uluru = {lat: -23.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map_frame'), {
+            zoom: 4,
+            center: uluru
         });
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h5 id="firstHeading" class="firstHeading"><b>Введенская Слобода</b></h5>'+
+            '<h6>Волокаламское ш. - 12 км.</h6>'+
+            '<div id="bodyContent">'+
+            '<img src="img/cott/1.jpg" id="popup_img" alt="" style="width: 100%;">'+'<br>'+
+            '<p> Сауна, бассейн, русский бильярд, до 30 человек</p>'+
+            '<h6>Стоимость</h6>'+
+            '<p class="popup_prices">Пн - Чт: 10000 руб. <br>'+
+            'Пт:  10000 руб. <br>'+
+            'Сб:  10000 руб. <br>'+
+            'Вск:  10000 руб. <br>'+
+            'Новый год:  10000 руб.</p>'+
+            '<button type="button" class="btn btn-primary btn-sm btn-block">Позвонить</button>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            title: 'Uluru (Ayers Rock)'
+        });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2G3BCBWwdicpR3XlUdDe43xzvimcFoks&callback=initMap">
+</script>
+<script>
+    $(document).ready(function(){
+        var size = 46,
+            newsContent= $('.mobile_item_description').find('p'),
+            newsText = newsContent.text();
+
+        if(newsText.length > size){
+            newsContent.text(newsText.slice(0, size) + ' ...');
+        }
+        $('#open_more_seacrh').on('click',function(){
+            if($('#more_search_container').hasClass('d-none')) {
+                $('#first_section_constuctor').removeClass('mr-auto');
+                $('#more_search_container').removeClass('d-none');
+                $('#open_more_seacrh').text("Скрыть");
+            }else{
+                $('#first_section_constuctor').addClass('mr-auto');
+                $('#more_search_container').addClass('d-none');
+                $('#open_more_seacrh').text("Расширенный поиск");
+            }
+        });
+        var max = 0;
+        $('.catalog_item_description').each(function(){
+            max = Math.max(max, $(this).height());
+        }).height(max);
         $('#datastart-container input').datepicker({
             startDate: "today",
             orientation: "bottom left",

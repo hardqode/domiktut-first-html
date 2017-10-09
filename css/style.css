@@ -18,13 +18,14 @@ a:hover{
 .date input{
     height: 1.85rem;
 }
-.second_btn{
-  font-size: 13px;
+.second_btn button{
+    width: 100%;
+    text-align: left;
+  font-size: 12px;
   color: gray;
   margin-top:10px;
-}
-.second_btn a{
-  color: gray;
+    border:0;
+    background: transparent;
 }
 .orange_text{
     color: #ff4900;
@@ -62,7 +63,7 @@ a:hover{
     padding: 8px 0 0;
 }
 .top-telefone{
-  font-size: 1.33rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .top-icon{
@@ -110,7 +111,8 @@ a:hover{
   margin-top:6px;
 }
 #more_search{
-  font-size:13px;
+  font-size:12px;
+    padding: 0;
 }
 #more_search a{
   color: gray;
@@ -170,6 +172,7 @@ div.opacity:hover{
     margin-left: 10px;
 }
 .catalog_item_price span{
+    font-size: 14px;
   z-index: 3;
   padding:5px;
   font-weight: bold;
@@ -389,7 +392,17 @@ margin-bottom:30px;
 text-align: center;
 }
 .bottom_image img{
-width:80%;
+    width: 100%;
+}
+#open_more_seacrh{
+    text-align: left;
+    color: gray;
+    border:0;
+    background:transparent;
+
+}
+#first_section_constuctor{
+    margin-left:30%;
 }
 .top-radios{
     padding:0;
@@ -425,6 +438,18 @@ background: #ff6e00;
 }
 #main_map{
 height:100%;
+}
+#map{
+    height: 500px;
+}
+#map_frame{
+    height:100%;
+}
+#popup_img{
+    margin-bottom: 20px;
+}
+.popup_prices{
+    margin-bottom: 0.8rem;
 }
 .top-mobile-telephone{
 margin-left: 145px;
@@ -509,7 +534,12 @@ font-weight: bold;
     padding: 0.2rem .75rem;
     font-size: 14px;
 }
+
 @media (min-width: 320px){
+    #first_section_constuctor{
+        margin-left: 0;
+        padding-top: 10px;
+    }
     .add_icon{
         font-size:2rem;
     }
@@ -632,6 +662,10 @@ display: none;
 
 
 @media (min-width: 768px){
+    #first_section_constuctor{
+        margin-left: 30%;
+        padding-top: 20px;
+    }
     .add_icon{
         font-size:4rem;
     }
