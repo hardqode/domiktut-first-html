@@ -19,6 +19,9 @@ a:hover{
 .header_nav{
   font-size: 17px;
 }
+.nav-item{
+    /*font-size:0.8rem;*/
+}
 .date input{
     height: 1.85rem;
 }
@@ -243,7 +246,7 @@ div.opacity:hover{
 #footer_phone{
     color: white;
   text-align: center;
-  font-size:20px;
+  font-size:18px;
   font-weight: bold;
 }
 #footer .col-md-2 ul li .nav-link{
