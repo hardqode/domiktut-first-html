@@ -282,7 +282,7 @@
 </div>
 <!-- FOOTER -->
 
-<div class="first_part_footer col-12 row d-none d-md-flex" id="footer_first">
+<div class="first_part_footer col-12 row d-sm-flex" id="footer_first">
     <div class="col-12 ">
         <img src="img/logo-domiktut4.png" alt="">
     </div>
@@ -300,7 +300,7 @@
         </a>
     </div>
 
-    <div class="col-12 col-md-2 ml-md-auto footer_menu d-sm-none d-md-flex" >
+    <div class="col-12 col-md-2 ml-md-auto footer_menu d-sm-none d-md-flex">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Коттеджи в Казани</a>
@@ -343,14 +343,11 @@
         <div class="col-12 ">
             <label id="footer_phone">+7 (917) 123-45-67</label>
             <div id="under_phone">
-                <div class="col-md-7  " id="footer_host"><label>Domiktut.ru 2017</label></div>
-                <div class="col-md-3  footer_icon">
+                <div class="col-md-12  " id="footer_host">
+                    <label>Domiktut.ru 2017</label>
                     <a href="#">
                         <img src="img/vk.png" alt="" width="20" height="20">
                     </a>
-                </div>
-
-                <div class="col-md-3 footer_icon">
                     <a href="#">
                         <img src="img/vk.png" alt="" width="20" height="20">
                     </a>
@@ -362,7 +359,7 @@
 </div>
 <div class="row" id="modile_call">
     <div class="col-12 d-flex d-md-none">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Позвонить</button>
+        <a href="tel:=123567890" class="call-btn"><button type="button" class="btn btn-primary btn-sm btn-block">Позвонить</button></a>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -400,32 +397,20 @@
             loop:true,
             slideMargin: 10,
             thumbItem: 9,
+            enableTouch:true,
+            enableDrag:true,
+            freeMove:true,
+            swipeThreshold: 40,
             responsive : [
                 {
                     breakpoint:780,
                     settings: {
                         gallery: false,
-                        pager:0
-                    }
-                }
-            ]
-        });
-        $('#mobileLightSlider').lightSlider({
-            gallery: false,
-            pager:0,
-            item: 1,
-            loop:true,
-            slideMargin: 10,
-            thumbItem: 9,
-            responsive : [
-                {
-                    breakpoint:800,
-                    settings: {
-                    }
-                },
-                {
-                    breakpoint:0,
-                    settings: {
+                        pager:0,
+                        enableTouch:true,
+                        enableDrag:true,
+                        freeMove:true,
+                        swipeThreshold: 40
                     }
                 }
             ]
@@ -446,7 +431,7 @@
                     }
                 },
                 {
-                    breakpoint:480,
+                    breakpoint:780,
                     settings: {
                         item:1,
                         slideMove:1,
