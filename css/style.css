@@ -673,6 +673,9 @@ width:290px;
 .footer_menu{
 text-align: center;
 }
+.footer_menu ul li a{
+    font-weight: 700;
+}
 #footer_host{
 text-align: right;
 }
