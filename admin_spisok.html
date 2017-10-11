@@ -22,6 +22,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <link href="css/nouislider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/footable.bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -162,37 +163,57 @@
             <div class="col-12">
                 <input type="text" class="form-control" id="inputLink" placeholder="">
             </div>
-            <div class="col-12">
+            <div class="col-12 mt">
                 <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Название</th>
-                      <th>Город</th>
-                      <th>Дата последнего обновления</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Салмачи</td>
-                      <td>Казань</td>
-                      <td>25.05.2017</td>
-                    </tr>
-                    <tr>
-                      <td>123</td>
-                      <td>123</td>
-                      <td>123</td>
-                    </tr>
-                    <tr>
-                      <td>123</td>
-                      <td>123</td>
-                      <td>123</td>
-                    </tr>
-                    <tr>
-                      <td>123</td>
-                      <td>123</td>
-                      <td>123</td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Город</th>
+                            <th>Дата последнего обновления</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Салмачи</td>
+                            <td>Казань</td>
+                            <td>25.05.2017</td>
+                        </tr>
+                        <tr>
+                            <td>Салмачи</td>
+                            <td>Казань</td>
+                            <td>25.05.2017</td>
+                        </tr>
+                        <tr>
+                            <td>Салмачи</td>
+                            <td>Казань</td>
+                            <td>25.05.2017</td>
+                        </tr>
+                        <tr>
+                            <td>Салмачи</td>
+                            <td>Казань</td>
+                            <td>25.05.2017</td>
+                        </tr>
+                        <tr>
+                            <td>Салмачи</td>
+                            <td>Казань</td>
+                            <td>25.05.2017</td>
+                        </tr>
+                        <tr>
+                            <td>Салмачи</td>
+                            <td>Казань</td>
+                            <td>25.05.2017</td>
+                        </tr>
+                        <tr>
+                            <td>Салмачи</td>
+                            <td>Казань</td>
+                            <td>25.05.2017</td>
+                        </tr>
+                        <tr>
+                            <td>Салмачи</td>
+                            <td>Казань</td>
+                            <td>25.05.2017</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -296,5 +317,11 @@
         crossorigin="anonymous"></script>
 <script src="js/bootstrap-datepicker.min.js"></script>
 <script src="js/bootstrap-datepicker.ru.min.js"></script>
+<script src="js/footable.min.js"></script>
+<script>
+    $(document).ready(function(){
+       $('.table').footable();
+    });
+</script>
 </body>
 </html>
