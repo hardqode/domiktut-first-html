@@ -13,13 +13,13 @@
           integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/lightslider.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
+    <link type="text/css" rel="stylesheet" href="css/lightgallery.css"/>
     <script src="js/lightgallery.js"></script>
-    <link type="text/css" rel="stylesheet" href="css/slider.css" />
+    <link type="text/css" rel="stylesheet" href="css/slider.css"/>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="top-mobile-telephone d-md-none col-12" >
+    <div class="top-mobile-telephone d-md-none col-12">
         <label>+7 (915)018-86-11</label>
     </div>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
@@ -99,17 +99,19 @@
                 <input type="radio" checked autocomplete="off"> Список
             </label>
             <label class="btn btn-top-menu" id="filter">
-                <input type="radio" autocomplete="off" > Фильтр
+                <input type="radio" autocomplete="off"> Фильтр
             </label>
             <label class="btn btn-top-menu" id="button_map">
-                <input type="radio" autocomplete="off" > Карта
+                <input type="radio" autocomplete="off"> Карта
             </label>
             <label class="btn btn-top-menu" id="mobile_search_btn">
-                <input type="radio" autocomplete="off"> <i class="material-icons" >search</i>
+                <input type="radio" autocomplete="off"> <i class="material-icons">search</i>
             </label>
         </div>
         <div class="col-12 mobile_search d-none" id="mobile_search_section">
-            <i class="material-icons orange_text" id="exit_mobile_seach">clear</i><input class="form-control" type="text" placeholder="Введите название коттеджа">
+            <i class="material-icons orange_text" id="exit_mobile_seach">clear</i><input class="form-control"
+                                                                                         type="text"
+                                                                                         placeholder="Введите название коттеджа">
         </div>
     </div>
 </nav>
@@ -118,7 +120,8 @@
     <div class="col-12 col-md-2 admin_spisok">
         <div data-children=".item">
             <div class="item">
-                <a class="bold black" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">
+                <a class="bold black" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1"
+                   aria-expanded="true" aria-controls="exampleAccordion1">
                     Список коттеджей
                 </a>
                 <div id="exampleAccordion1" class="collapse show" role="tabpanel">
@@ -133,12 +136,15 @@
                 </div>
             </div>
             <div class="item">
-                <a class="bold black" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2">
+                <a class="bold black" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2"
+                   aria-expanded="false" aria-controls="exampleAccordion2">
                     Параметры
                 </a>
                 <div id="exampleAccordion2" class="collapse" role="tabpanel">
                     <p class="mb-3">
-                        Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis.
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                     </p>
                 </div>
             </div>
@@ -161,6 +167,16 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <span class="col-2">Город</span>
+                        <select class="col-8 ml-3 custom-select">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <button class="col-1 ml-3 btn btn-primary">+</button>
+                    </div>
+                    <div class="form-group row">
                         <label for="inputAdres" class="col-sm-2 col-form-label">Адрес</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputAdres" placeholder="">
@@ -168,29 +184,28 @@
                     </div>
                     <div class="form-group">
                         <label for="description-of-item">Описание</label>
-                        <textarea class="form-control" id="description-of-item" rows="5"></textarea>
+                        <textarea class="form-control" id="description-of-item" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="description-of-item">Описание - мобильная версия</label>
+                        <textarea class="form-control" id="description-of-item" rows="4"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="more-uslugi-of-item">Доп. услуги</label>
-                        <textarea class="form-control" id="more-uslugi-of-item" rows="5"></textarea>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputLink" class="col-2 col-form-label bold">Видео</label>
-                        <div class="col-5 col-md-7">
-                            <input type="text" class="form-control" id="inputLink" placeholder="">
-                        </div>
-                        <button type="button" class="btn btn-primary col-4 col-md-3">Добавить</button>
+                        <textarea class="form-control" id="more-uslugi-of-item" rows="4"></textarea>
                     </div>
                 </form>
             </div>
             <div class="col-12 col-md-6">
                 <div class="embed-responsive embed-responsive-21by9 mt">
-                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287089.66150478285!2d48.7931280271237!3d55.79518301843937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1506689478228" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287089.66150478285!2d48.7931280271237!3d55.79518301843937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1506689478228"
+                            allowfullscreen></iframe>
                 </div>
                 <div class=" mt">
                     <h5 class="bold">Стоимость</h5>
                 </div>
-                <form>
+                <form class="mt">
                     <div class="form-group row admin_create_prices">
                         <label for="budniprice" class="col-sm-3 col-form-label a">Пн. - Чт.</label>
                         <div class="col-sm-7">
@@ -224,6 +239,75 @@
 
                 </form>
             </div>
+            <div class="col-12 col-md-6">
+                <h6 class="bold">Фильтры</h6>
+                <div class="row admin_selects">
+
+                    <span class="col-4">Бассейн</span>
+                    <select class="col-7 custom-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <span class="col-4">Парная</span>
+                    <select class="col-7 custom-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <span class="col-4">Развлечения</span>
+                    <select class="col-7 custom-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <span class="col-4">Расположение</span>
+                    <select class="col-7 custom-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                    <div class="form-group col-12 mt">
+                        <div class="row">
+                        <label for="inputLink" class="col-2 col-form-label bold">Видео</label>
+                        <div class="col-5 col-md-7">
+                            <input type="text" class="form-control" id="inputLink" placeholder="">
+                        </div>
+                        <button type="button" class="btn btn-primary col-4 col-md-3">Добавить</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mt">
+                <form>
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Название</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputAdres" class="col-sm-2 col-form-label">Адрес</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputAdres" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputAdres" class="col-sm-2 col-form-label">Адрес</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputAdres" placeholder="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
             <div class="col-12">
                 <h5 class="bold">Фотографии</h5>
                 <div class="row mt">

@@ -535,12 +535,11 @@ font-weight: bold;
     padding-top:20px;
     margin-bottom: 60px;
 }
-.admin_create_prices{
-    margin-bottom: 0;
+.admin_selects select{
+    margin-top:10px;
 }
-.admin_create_prices input{
-    padding: 0.2rem .75rem;
-    font-size: 14px;
+.admin_selects span{
+    margin-top:10px;
 }
 
 @media (min-width: 320px){
